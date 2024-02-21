@@ -1,0 +1,7 @@
+@import '../../styles/variables';
+p > a {
+  color: $main-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}

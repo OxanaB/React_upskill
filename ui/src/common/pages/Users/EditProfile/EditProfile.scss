@@ -1,0 +1,28 @@
+.editprofile {
+  margin-right: 2rem;
+  width: 100%;
+  &__content {
+    h4 {
+      margin-bottom: 1rem;
+    }
+    margin-top: 2rem;
+    &-item {
+      min-width: 12.5rem;
+      & + & {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &--wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .editprofile__content-item {
+      margin-top: 0;
+    }
+  }
+
+}

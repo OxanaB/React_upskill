@@ -1,0 +1,110 @@
+{
+  "name": "ui",
+  "author": {
+    "name": "Refactor Code"
+  },
+  "license": "MIT",
+  "version": "0.0.2",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest --watchAll",
+    "typecheck": "tsc --noEmit --skipLibCheck",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "prettier --write \"**/*.+(ts|tsx|json|css|md)\""
+  },
+  "jest": {
+    "verbose": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint && yarn typecheck"
+    }
+  },
+  "dependencies": {
+    "@types/react-datepicker": "^3.1.2",
+    "@types/react-select": "^3.0.28",
+    "axios": "^0.21.1",
+    "classnames": "^2.2.6",
+    "formik": "^2.2.6",
+    "froala-editor": "^3.2.5-1",
+    "history": "4.0.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "query-string": "^6.13.8",
+    "rc-slider": "^9.7.1",
+    "react": "^16.13.1",
+    "react-color": "^2.19.3",
+    "react-datepicker": "^3.3.0",
+    "react-dom": "^16.13.1",
+    "react-froala-wysiwyg": "^3.2.5-1",
+    "react-paginate": "^6.5.0",
+    "react-redux": "^7.2.2",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-select": "^3.1.1",
+    "react-toastify": "^6.2.0",
+    "react-tooltip": "^4.2.13",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.1.3",
+    "yup": "^0.32.8"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/axios": "^0.14.0",
+    "@types/classnames": "^2.2.11",
+    "@types/enzyme": "^3.10.8",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/history": "^4.7.8",
+    "@types/jest": "24.9.0",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^14.14.16",
+    "@types/react": "^17.0.0",
+    "@types/react-color": "^3.0.4",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-paginate": "^6.2.1",
+    "@types/react-redux": "^7.1.12",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-config": "^5.0.1",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/react-toastify": "^4.1.0",
+    "@types/react-tooltip": "^4.2.4",
+    "@types/redux": "^3.6.0",
+    "@types/redux-mock-store": "^1.0.2",
+    "@types/redux-saga": "^0.10.5",
+    "@types/yup": "^0.29.10",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-simple-import-sort": "^5.0.0",
+    "husky": "^4.2.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "24.9.0",
+    "node-sass": "^4.14.0",
+    "prettier": "^2.0.5",
+    "redux-mock-store": "^1.5.4",
+    "ts-jest": "24.2.0",
+    "types": "^0.1.1",
+    "typescript": "3.8.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

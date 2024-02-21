@@ -1,0 +1,141 @@
+@import '../../styles/variables';
+
+input[type='text'],
+input[type='number'],
+input[type='password'],
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 0.0625rem solid $grey-color;
+  border-radius: 0.25rem;
+  resize: vertical;
+  outline: none;
+
+  &::placeholder {
+    color: $grey-color;
+  }
+  &:focus {
+    -webkit-box-shadow: $shadow-input-focus;
+    -moz-box-shadow: $shadow-input-focus;
+    box-shadow: $shadow-input-focus;
+  }
+}
+.input-field {
+  position: relative;
+  &__label {
+    &.required {
+      &:after {
+        content:" *";
+        color: $text-error-color;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  &--icon {
+    input {
+      padding-left: 2.1rem;
+    }
+    .icon {
+      position: absolute;
+      top: 0.87rem;
+      left: 0.8rem;
+      &:hover {
+        cursor: inherit;
+      }
+    }
+  }
+  &--password {
+    .icon {
+      position: absolute;
+      top: 0.88rem;
+      right: 0.8rem;
+    }
+  }
+  & + .input-field {
+    margin-top: 1rem;
+  }
+
+  &--errors {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: $text-error-color;
+  }
+}
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  & + & {
+    margin-top: 1rem;
+  }
+  .checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    & + label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+    + label::before {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid $grey-additiomal-color;
+      border-radius: 0.25em;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+    &:checked + label::before {
+      border-color: $main-color;
+      background-color: $main-color;
+      background-image: url('../../../assets/icons/check.svg');
+      background-size: 1rem 1rem;
+    }
+  }
+}
+
+.browse-wrap {
+  top: 0;
+  left: 0;
+  margin: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 1.25rem 3.75rem;
+  text-align: center;
+  position: relative;
+  background-color: #f6f7f8;
+  border: solid 1px #d2d2d7;
+
+  .title {
+    color: $main-color;
+  }
+  .upload {
+    right: 0;
+    margin: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    position: absolute;
+  }
+  .upload-path {
+    text-align: center;
+    margin: 20px;
+    display: block;
+    color: $main-color;
+  }
+}
+
+
+/* Color picker */
+.chrome-picker {
+  position: relative;
+}

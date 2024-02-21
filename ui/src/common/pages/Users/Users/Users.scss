@@ -1,0 +1,81 @@
+@import '../../../styles/variables';
+
+.users {
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  &__item {
+    background-color: $transparent-black;
+    & + & {
+      margin-top: 1rem;
+    }
+    &-content {
+      padding: 0rem 1rem 1rem 1rem;
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+      > .defaultpage__inner-block {
+        background: inherit;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border-radius: none;
+      }
+      &--city {
+        display: block;
+        margin-left: 3rem;
+      }
+      &--date {
+        font-size: 0.9rem;
+        color: $grey-additiomal-color;
+        margin-left: 1rem;
+      }
+    }
+    &-main {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      > * {
+        margin-right: 0.5rem;
+      }
+      a {
+        color: $main-color;
+        &:hover {
+          border-bottom: 1px dashed $main-color;
+        }
+      }
+      &--photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 0.5rem;
+      }
+      &--position {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+        border-radius: 0.2rem;
+        color: $white;
+        background-color: $main-color;
+      }
+      &--status {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+        border-radius: 0.2rem;
+        color: $white;
+        background-color: $text-error-color;
+        &-active {
+          font-size: 0.8rem;
+          padding: 0.3rem;
+          border-radius: 0.2rem;
+          color: $white;
+          background-color: $info-text;
+        }
+      }
+      &--salary {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

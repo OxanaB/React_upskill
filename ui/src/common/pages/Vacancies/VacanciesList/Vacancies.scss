@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+
+.vacancies {
+  &__item {
+    padding: 1rem;
+    a {
+      color: $main-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &-features {
+      display: flex;
+      
+    }
+    &-date {
+      margin-top: 0.5rem;
+      color: $grey-additiomal-color;
+    }
+    &-description {
+      margin-top: 0.5rem;
+      width: 100%;
+    word-wrap: break-word;
+    }
+    &-title {
+      a {
+        font-weight: 600;
+      }
+      display: flex;
+      justify-content: space-between;
+    }
+    &-img {
+      img {
+        width: 4.375rem;
+        height: 4.375rem;
+      }
+    }
+  }
+  &__filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.header {
+  min-height: 3.125rem;
+  box-shadow: 0rem 0rem 0.625rem $transparent-black-shadow;
+  position: relative;
+
+  &__inner {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

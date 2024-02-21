@@ -1,0 +1,54 @@
+.icon {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-size: 1rem 1rem;
+  &-fb {
+    background-image: url("../../../assets/icons/fb.svg");
+  }
+  &-eye {
+    background-image: url("../../../assets/icons/eye.svg");
+    &--active {
+      background-image: url("../../../assets/icons/eye-active.svg");
+    }
+  }
+  &-search {
+    background-image: url("../../../assets/icons/search.svg");
+  }
+  &-mail {
+    background-image: url("../../../assets/icons/email.svg");
+  }
+  &-user {
+    background-image: url("../../../assets/icons/user.svg");
+  }
+  &-arrow {
+    background-image: url("../../../assets/icons/arrow-down.svg");
+    width: 0.6rem;
+    height: 0.6rem;
+    background-size: 0.6rem 0.6rem;
+  }
+  &-settings {
+    background-image: url("../../../assets/icons/settings.svg");
+  }
+  &-information {
+    background-image: url("../../../assets/icons/info-icon.svg");
+  }
+  &-logout {
+    background-image: url("../../../assets/icons/logout.svg");
+  }
+  &-filterup {
+    background-image: url("../../../assets/icons/filter-up.svg");
+    width: 0.6rem;
+    height: 0.6rem;
+    background-size: 0.6rem 0.6rem;
+    &.active {
+      background-image: url("../../../assets/icons/filter-up-active.svg");
+    }
+  }
+  &.rotate {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  &__link--active {
+    border: 1px solid $main-color;
+  }
+  li + li {
+    margin-left: 1rem;
+  }
+  a {
+    padding: 0.5rem 1rem;
+    color: $main-color;
+    &:hover {
+      background-color: $soft-main-color;
+      cursor: pointer;
+    }
+  }
+  &__link--disabled {
+    a {
+      color: $steel-gray-120;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.menu {
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    &--mobile {
+      display: flex;
+      align-items: center;
+    }
+
+    @media (max-width: map-get($breakpoints, xs)) {
+      display: none;
+    }
+
+    &-item {
+      padding: 0.5rem 1rem;
+      border-radius: 0.7rem;
+      & + &.menu__list-item {
+        margin-left: 0.5rem;
+      }
+      &--active {
+        background: $soft-main-color;
+      }
+      a {
+        color: $main-color;
+        &:hover {
+          border-bottom: 1px dashed $main-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+@keyframes apperance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.filter {
+  &__item {
+    margin-bottom: 1rem;
+    &-content {
+      margin-top: 0.8rem;
+      animation: 0.3s ease 0s 1 apperance;
+      &--salary {
+        display: flex;
+        align-items: center;
+        .input-field {
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          input {
+            height: 2rem;
+          }
+        }
+      }
+      .rc-slider {
+        .rc-slider-track {
+          background-color: $main-color;
+        }
+        .rc-slider-handle {
+          background-color: $main-color;
+          border-color: $main-color;
+          &:active {
+            border-color: $main-color;
+            box-shadow: 0 0 5px $main-color;
+          }
+        }
+        .rc-slider-handle-dragging.rc-slider-handle-dragiing.rc-slider-handle-dragging {
+          border-color: $main-color;
+          box-shadow: none;
+        }
+      }
+    }
+    &-title {
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        font-size: 1rem;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

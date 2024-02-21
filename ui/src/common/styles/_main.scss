@@ -1,0 +1,77 @@
+@import "./normalize";
+@import "./variables";
+@import "./container";
+@import "./fonts";
+
+html {
+  box-sizing: border-box;
+  overflow-y: overlay;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  cursor: pointer;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-family: $font-bold, sans-serif;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: $font-semibold, sans-serif;
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-family: $font-medium, sans-serif;
+  font-size: 1.15rem;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: #ffff;
+}
+
+body {
+  height: 100vh;
+  font-size: 18px;
+  font-family: $font-regular, sans-serif;
+  color: $text-color;
+  @media (min-width: map-get($breakpoints, sm)) and (max-width: map-get($breakpoints, md)) {
+    font-size: 16px;
+  }
+  @media (max-width: map-get($breakpoints, md)) {
+    font-size: 12px;
+  }
+}
+

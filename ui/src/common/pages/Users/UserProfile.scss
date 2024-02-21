@@ -1,0 +1,143 @@
+@import "../../styles/variables";
+
+@keyframes appear {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.defaultpage {
+  &__inner {
+    display: flex;
+    @media (max-width: map-get($breakpoints, xs)) {
+      display: block;
+    }
+    &-block {
+      background: $white;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.0625rem 0 0 $steel-gray-120,0 0 0 0.0625rem $steel-gray-80;
+      margin: 1rem 0 0;
+      padding: 1rem;
+      &--minform {
+        margin-top: 1rem;
+        &.inputs {
+          width: 30%;
+        }
+      }
+    }
+    &-left {
+      min-width: 13.75rem;
+      max-width: 14.375rem;
+      @media (max-width: map-get($breakpoints, sm)) {
+        min-width: 10rem;
+        max-width: 12rem;
+      }
+      @media (max-width: map-get($breakpoints, xs)) {
+        width: 100%;
+        min-width: none;
+        max-width: none;
+      }
+      .userpage__leftblock {
+        &-buttons {
+          display: flex;
+          justify-content: center;
+          margin-top: 0.5rem;
+        }
+        &-tags {
+          .btn.btn-small.soft + .btn.btn-small.soft {
+            margin-bottom: 0.25rem;
+          }
+        }
+        &-responses {
+          &--title {
+            margin-bottom: 0.8rem;
+          }
+          
+          &--item {
+            display: flex;
+            align-items: center;
+            span {
+              font-size: 0.9rem;
+              color: $main-color;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+             + .userpage__leftblock-responses--item {
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+    &-line {
+      width: 100%;
+      height: 0.0625rem;
+      background-color: $soft-main-color;
+      margin: 1rem 0;
+    }
+    &-date {
+      color: $grey-color;
+    }
+    &-center {
+      width: 77%;
+      margin-left: 2rem;
+      &.dashboard-center {
+        margin-left: 0;
+      }
+      @media (max-width: map-get($breakpoints, sm)) {
+        width: 70%;
+        margin-right: 0;
+      }
+      @media (max-width: map-get($breakpoints, xs)) {
+        width: 100%;
+        margin-left: 0;
+      }
+      .message {
+        animation: ease .3s appear;
+      }
+    }
+    &-info {
+      &--short {
+      display: flex;
+      justify-content: space-between;
+      }
+      &--desc {
+        font-size: 1.1rem;
+        line-height: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      &--about {
+        h3 {
+          margin-bottom: 0.3rem;
+        }
+      }
+      &--text {
+        color: $grey-additiomal-color;
+        span {
+          color: $text-color;
+        }
+        .salary {
+          color: $green-text;
+        }
+      }
+      &--name {
+        display: flex;
+        align-items: center;
+        h2 {
+          margin-right: 0.4rem;
+        }
+      }
+    }
+    &-avatar {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 0.25rem;
+      &--company {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 0.3rem;
+      }
+    }
+  }
+}

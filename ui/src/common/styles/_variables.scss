@@ -1,0 +1,45 @@
+$breakpoints: (
+  xs: 36rem,
+  sm: 48rem,
+  md: 62rem,
+  lg: 75rem,
+);
+
+$font-regular: 'SFProdisplay-Regular';
+$font-medium: 'SFProdisplay-Medium';
+$font-semibold: 'SFProdisplay-Semibold';
+$font-bold: 'SFProdisplay-Bold';
+
+$main-color: #6979f8;
+$soft-main-color:  #E5E7FA;
+$transparent-main-color: rgba(105, 121, 248, .3);
+$text-color: #1a051d;
+$strong-transparent-black: rgba(0,0,0, 0.4);
+$transparent-black: rgba(0, 0, 0, 0.02);
+$transparent-black-shadow: rgba(0, 0, 0, 0.07);
+$transparent-loader: rgba(255, 255, 255, 0.6);
+$white: #ffffff;
+$grey-color: #ccc;
+$steel-gray-120: #d3d9de;
+$steel-gray-80: #e7e8ec;
+$grey-additiomal-color: #aaa;
+$text-error-color: #e74c3c;
+$green-text: #228B22;
+$info-text: #17a2b8;
+$line-border: rgba(105, 121, 248, 0.3);
+$box-shadow-text: rgba(0, 0, 0, 0.3);
+$shadow-input-focus: 0.1875rem 0.125rem 0.875rem -0.3125rem $box-shadow-text;
+
+$error-message: (
+  text-color: #721c24,
+  bg-color: #f8d7da,
+  border-color: #f5c6cb,
+);
+
+$success-message: (
+  text-color: #155724,
+  bg-color: #d4edda,
+  bd-color: #c3e6cb,
+);
+
+

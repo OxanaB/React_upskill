@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.switch-wrapper {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    margin-left: 0.3rem;
+  }
+
+  &__toggle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    input[type='checkbox'] {
+      display: none;
+      &:checked + .switch-wrapper__toggle--circle {
+        background-color: $main-color;
+      }
+      &:checked + .switch-wrapper__toggle--circle::before {
+        transform: translateX(19px);
+        background-color: $white;
+      }
+    }
+    &--circle {
+      position: absolute;
+      background-color: $grey-color;
+      border-radius: 25px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: background-color 0.2s ease;
+      &::before {
+        position: absolute;
+        content: '';
+        left: 2px;
+        top: 2px;
+        width: 16px;
+        height: 16px;
+        background-color: $grey-additiomal-color;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}

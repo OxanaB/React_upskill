@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.auth {
+    &__inner {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      &-info {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #666;
+      }
+      &-buttons {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a {
+          color: $main-color;
+          text-transform: uppercase;
+          &:hover {
+            border-bottom: 1px dashed $main-color;
+          }
+        }
+      }
+      &-title {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      &-card {
+        display: flex;
+        padding: 2rem 6rem;
+        border-radius: 1rem;
+        background-color: #fff;
+        &--content {
+          max-width: 16.25rem;
+        }
+      }
+    }
+}

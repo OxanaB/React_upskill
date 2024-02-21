@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  border-radius: 0;
+  transform: translateY(-50%) translateX(-50%);
+  background: $transparent-loader;
+
+  &.initial {
+    background: $white;
+  }
+
+  &-circle {
+    width: 4.375rem;
+    height: 4.375rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0.1875rem solid $main-color;
+    animation: preloader-animation 0.7s infinite alternate;
+
+    &:nth-child(2) {
+      width: 2.5rem;
+      height: 2.5rem;
+      animation-delay: 0.05s;
+    }
+    &:nth-child(3) {
+      width: 1.25rem;
+      height: 1.25rem;
+      animation-delay: 0.1s;
+    }
+  }
+}
+
+@keyframes preloader-animation {
+  0% { transform: translateX(-50%) translateY(-50%) scale(0.5) }
+  100% { transform: translateX(-50%) translateY(-50%) scale(1) }
+}

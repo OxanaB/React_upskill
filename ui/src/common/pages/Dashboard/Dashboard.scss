@@ -1,0 +1,61 @@
+@import '../../styles/variables';
+
+.dashboard {
+  &-title {
+    font-size: 0.9rem;
+    color: $grey-additiomal-color;
+    a {
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__sub {
+    margin-top: 1rem;
+    text-align: center;
+
+    img {
+      width: 9rem;
+      padding: 1.25rem;
+      border: 2px solid $main-color;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      line-height: 2;
+    }
+  }
+  &__item {
+    margin-top: 1rem;
+    a {
+      color: $main-color;
+      font-weight: 600;
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    &-description {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__text {
+        text-overflow: ellipsis;
+        text-align: left;
+        overflow: hidden;
+      }
+      img {
+        width: 5rem;
+        margin-left: 2rem;
+      }
+    }
+  }
+}

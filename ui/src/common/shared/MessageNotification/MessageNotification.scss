@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.message {
+  padding: .75rem 1rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  &-error {
+    color: map-get($error-message, text-color);
+    background-color: map-get($error-message, bg-color);
+    border-color: map-get($error-message, bd-color);
+  }
+  &-success {
+    color: map-get($success-message, text-color);
+    background-color: map-get($success-message, bg-color);
+    border-color: map-get($success-message, bd-color);
+  }
+}

@@ -1,0 +1,122 @@
+@import '../../styles/variables';
+
+@keyframes apperance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	z-index: 1000;
+	&__warning {
+		color: $white;
+	}
+  &__mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $transparent-loader;
+    z-index: 1000;
+  }
+  &__container {
+    position: relative;
+		z-index: 100001;
+		background-color: #fff;
+		border-radius: 0.625rem;
+		animation: 1s ease-out 0s 1 apperance;
+		&--warning {
+			padding: 1rem;
+			background-color: $main-color;
+		}
+  }
+}
+
+.default-modal {
+	min-width: 12rem;
+	max-width: 26rem;
+	padding: 1rem 1rem;
+  display: flex;
+	flex-direction: column;
+	
+	&__img {
+		padding: 2rem;
+		img {
+			width: 100%;
+		}
+	}
+
+  &__buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.modal-wrapper__input {
+	width: 18.75rem;
+	position: relative;
+	margin: 0.3125rem;
+	overflow: hidden;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+	input {
+		width: 100%;
+		padding: 0.625rem;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid $grey-additiomal-color;
+		box-sizing: border-box;
+		font-size: 1rem;
+		position: relative;
+		z-index: 5;
+		background: none;
+		&:focus {
+			~ {
+				label {
+					top: 0px;
+          transform: scale(0.94) translateX(-0.125rem);
+				}
+				.modal-wrapper__input-line {
+					left: 0;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.modal-wrapper__input-line {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 0.1875rem;
+		left: -62.4375rem;
+		transition: .25s;
+		opacity: 0;
+		z-index: 6;
+	}
+	label {
+		position: absolute;
+		left: 0.625rem;
+		top: 45%;
+		transition: ease-out .15s;
+		color: $grey-additiomal-color;
+	}
+}
+
+.modal-wrapper__errors {
+  margin-top: 0.5rem;
+  color: $text-error-color;
+}

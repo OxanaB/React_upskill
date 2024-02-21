@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  min-height: 3rem;
+  width: 100%;
+  background-color: $soft-main-color;
+  @media (max-width: map-get($breakpoints, xs)) {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--item {
+      & + & {
+        margin-left: 1.5rem;
+      }
+      a {
+        color: $main-color;
+        &:hover {
+          border-bottom: 1px dashed $main-color;
+        }
+      }
+    }
+  }
+}

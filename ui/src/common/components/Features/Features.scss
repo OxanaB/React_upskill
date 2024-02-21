@@ -1,0 +1,70 @@
+@import "../../styles/variables";
+
+@keyframes apperance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.features {
+  margin-top: 2rem;
+  animation: 1s ease-out 0s 1 apperance;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  &__content {
+    margin-right: 3rem;
+    @media (max-width: map-get($breakpoints, md)) {
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-weight: 500;
+      font-size: 2rem;
+      span {
+        font-weight: 700;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 1.15rem;
+      line-height: 1.25;
+    }
+    &-menu {
+      margin-top: 0.8rem;
+      margin-left: 1.7rem;
+      @media (max-width: map-get($breakpoints, md)) {
+        text-align: left;
+      }
+      margin-bottom: 1rem;
+    }
+    &-item {
+      font-weight: 400;
+      font-size:  1rem;
+      line-height: 2.25;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../../../assets/icons/plus.svg");
+        background-size: 1.75rem 1.75rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        left: -2rem;
+      }
+    }
+  }
+  img {
+    @media (max-width: map-get($breakpoints, md)) {
+      display: none;
+    }
+  }
+}

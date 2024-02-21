@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn Page Error testing should be rendered with error 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <SignIn>
+    <div
+      className="auth"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="auth__inner"
+        >
+          <div
+            className="auth__inner-card"
+          >
+            <div
+              className="auth__inner-card--content"
+            >
+              <h1
+                className="auth__inner-title"
+              >
+                Sign in
+              </h1>
+              <Component
+                error="Test error"
+              >
+                <div
+                  className="message message-error"
+                >
+                  Test error
+                </div>
+              </Component>
+              <SignInForm>
+                <form
+                  onSubmit={[Function]}
+                >
+                  <InputField
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="Enter an email"
+                    type="text"
+                    value=""
+                  >
+                    <div
+                      className="input-field input-field--icon"
+                    >
+                      <input
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="Enter an email"
+                        type="text"
+                        value=""
+                      />
+                      <Icon
+                        iconName="icon-mail"
+                      >
+                        <span
+                          className="icon icon-mail"
+                        />
+                      </Icon>
+                    </div>
+                  </InputField>
+                  <InputPasswordField
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="Enter a password"
+                    type="password"
+                    value=""
+                  >
+                    <div
+                      className="input-field input-field--password"
+                    >
+                      <input
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter a password"
+                        type="password"
+                        value=""
+                      />
+                      <Icon
+                        iconName="icon-eye"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="icon icon-eye"
+                          onClick={[Function]}
+                        />
+                      </Icon>
+                      <div
+                        className="input-field--errors"
+                      />
+                    </div>
+                  </InputPasswordField>
+                  <div
+                    className="auth__inner-buttons"
+                  >
+                    <Component
+                      type="submit"
+                    >
+                      <button
+                        className="btn primary"
+                        type="submit"
+                      >
+                        Sign in
+                      </button>
+                    </Component>
+                  </div>
+                </form>
+              </SignInForm>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </SignIn>
+</Provider>
+`;
