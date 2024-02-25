@@ -1,9 +1,11 @@
 import { lazy } from 'react';
 
 import Home from '../pages/Home/Home';
+import { RenderRoutes } from '../containers/Layout/Routes';
+import { RenderRoutesProps } from '../interfaces/Route';
+
 const SignUp = lazy(() => import('../pages/Auth/SignUp/SignUp'));
 const SignIn = lazy(() => import('../pages/Auth/SignIn/SignIn'));
-import { RenderRoutes } from '../containers/Layout/Routes';
 const Dashboard = lazy(() => import('../pages/Dashboard/Dashboard'));
 const UserProfile = lazy(
   () => import('../pages/Users/UserProfile/UserProfile'),
@@ -12,7 +14,6 @@ const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
 const EditProfile = lazy(
   () => import('../pages/Users/EditProfile/EditProfile'),
 );
-import { RenderRoutesProps } from '../interfaces/Route';
 const Users = lazy(() => import('../pages/Users/Users/Users'));
 const Company = lazy(() => import('../pages/Companies/Company/Company'));
 const AddCompany = lazy(() => import('../pages/Companies/Company/AddCompany'));

@@ -23,8 +23,8 @@ const Layout = () => {
         </Header>
         <Switch>
           {routes.list.map((route: ExtendedRouteProps, i: number) => (
-            <Suspense fallback={<Loader init={false} />}>
-              <RouteWithSubRoutes key={i + route.path} {...route} />
+            <Suspense fallback={<Loader init={false} />} key={i + route.path}>
+              <RouteWithSubRoutes {...route} />
             </Suspense>
           ))}
         </Switch>
