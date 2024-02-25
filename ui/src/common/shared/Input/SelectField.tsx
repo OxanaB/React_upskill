@@ -8,7 +8,7 @@ interface SelectFieldProps {
     field: string,
     value: any,
     shouldValidate?: boolean | undefined,
-  ) => Promise<void> | Promise<FormikErrors<User>>;
+  ) => Promise<void> | Promise<FormikErrors<User>> | void;
   options: Array<{ value: string; label: string }>;
   current?: any;
   name: string;

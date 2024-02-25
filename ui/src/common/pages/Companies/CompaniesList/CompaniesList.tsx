@@ -12,20 +12,16 @@ import {
   companiesStateSelector,
   companiesStatusSelector,
 } from '../../../redux/selectors/companySelector';
-import Icon from '../../../shared/Icon/Icon';
 import { Loader } from '../../../shared/Loader/Loader';
-import classNames from 'classnames';
-import Slider from 'rc-slider';
 import { CompanyItem } from './CompanyItem';
 import useFilterItem from '../../../hooks/filters/useFilterItem';
-import InputField from '../../../shared/Input/InputField';
-import { Button } from '../../../shared/Button/Button';
 
 import './CompaniesList.scss';
 import { InformationToolTip } from '../../../components/ToolTips/InformationToolTip';
+import { CompanyStaffFilter } from '../../../components/Company/CompanyStaffFilter';
+import { CompanyFollowersFilter } from '../../../components/Company/CompanyFollowersFilter';
 
 const CompaniesList = () => {
-  const { Range } = Slider;
   const history = useHistory();
   const dispatch = useDispatch();
   const [isApplyClicked, setIsApplyClicked] = useState(false);
@@ -79,36 +75,13 @@ const CompaniesList = () => {
               <div className="defaultpage__inner-block defaultpage__leftblock">
                 <div className="companies__leftfilter">
                   <InformationToolTip desc="Collapse filter item to reset" />
-                  <FilterStaff>
-                    <div className="filter__item-content--salary">
-                      <InputField
-                        type="number"
-                        value={leftStaff.value}
-                        onChange={e => handleStaffChange(e, 0)}
-                      />
-                      -
-                      <InputField
-                        type="number"
-                        value={rightStaff.value}
-                        onChange={e => handleStaffChange(e, 1)}
-                      />
-                    </div>
-                    <Range
-                      max={1000}
-                      min={0}
-                      allowCross={false}
-                      value={[leftStaff.value, rightStaff.value]}
-                      onChange={value => {
-                        leftStaff.setLeftStaff(value[0]);
-                        rightStaff.setRightStaff(value[1]);
-                      }}
-                    />
-                  </FilterStaff>
-                  <div className="userpage__leftblock-buttons">
-                    <Button onClick={handleApplyClick} btnTheme="btn-small">
-                      Apply
-                    </Button>
-                  </div>
+                  <CompanyStaffFilter
+                    FilterStaff={FilterStaff}
+                    handleApplyClick={handleApplyClick}
+                    handleStaffChange={handleStaffChange}
+                    leftStaff={leftStaff}
+                    rightStaff={rightStaff}
+                  />
                 </div>
               </div>
             </div>
@@ -121,31 +94,10 @@ const CompaniesList = () => {
                       {companies?.count > 1 ? ` companies` : ` company`}
                     </h3>
                     <div className="companies__filter-item">
-                      <span
-                        className={classNames(
-                          'companies__filter-item--text',
-                          followers.value !== 0 && 'active',
-                        )}
-                        onClick={handleSortFollowers(0)}
-                      >
-                        Followers
-                      </span>
-                      <div className="companies__filter-item--icons">
-                        <Icon
-                          iconName={classNames(
-                            'icon-filterup',
-                            followers.value === -1 && 'active',
-                          )}
-                          onClick={handleSortFollowers(-1)}
-                        />
-                        <Icon
-                          iconName={classNames(
-                            'icon-filterup rotate',
-                            followers.value === 1 && 'active',
-                          )}
-                          onClick={handleSortFollowers(1)}
-                        />
-                      </div>
+                      <CompanyFollowersFilter
+                        followers={followers}
+                        handleSortFollowers={handleSortFollowers}
+                      />
                     </div>
                     <Select
                       autosize={true}

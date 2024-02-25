@@ -88,58 +88,38 @@ const Company = () => {
                 </div>
               </div>
             </PageCenterBlockContainer>
-            {vacancies && vacancies.length ? (
-              <PageCenterBlockContainer centerBlockName="userpage__inner-info">
-                <div className="userpage__inner-info--main">
-                  <div className="userpage__inner-info--about">
-                    <div className="company__vacancies-title">
-                      <h3>Vacancies:</h3>
-                      {me?._id === company?.author && (
-                        <Link
-                          className="btn btn-small primary"
-                          to={`/companies/${company.companyUrl}/add-vacancy`}
-                        >
-                          Add vacancy
-                        </Link>
-                      )}
-                    </div>
-                    <div className="defaultpage__inner-line"></div>
-                    <div className="company__vacancies">
-                      {vacancies.map((vacancy: Vacancy) => (
-                        <VacancyCompanyItem
-                          key={vacancy._id}
-                          vacancy={vacancy}
-                          name={company.name}
-                          avatar={company.avatar}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </PageCenterBlockContainer>
-            ) : me?._id === company?.author ? (
-              <PageCenterBlockContainer centerBlockName="userpage__inner-info">
-                <div className="userpage__inner-info--main">
-                  <div className="userpage__inner-info--about">
-                    <div className="company__vacancies-title">
-                      <h3>Vacancies:</h3>
+            <PageCenterBlockContainer centerBlockName="userpage__inner-info">
+              <div className="userpage__inner-info--main">
+                <div className="userpage__inner-info--about">
+                  <div className="company__vacancies-title">
+                    <h3>Vacancies:</h3>
+                    {me?._id === company?.author && (
                       <Link
                         className="btn btn-small primary"
                         to={`/companies/${company.companyUrl}/add-vacancy`}
                       >
                         Add vacancy
                       </Link>
-                    </div>
-                    <div className="defaultpage__inner-line"></div>
-                    <div className="company__vacancies">
+                    )}
+                  </div>
+                  <div className="defaultpage__inner-line"></div>
+                  <div className="company__vacancies">
+                    {vacancies && vacancies.length ? (
+                      vacancies.map((vacancy: Vacancy) => (
+                        <VacancyCompanyItem
+                          key={vacancy._id}
+                          vacancy={vacancy}
+                          name={company.name}
+                          avatar={company.avatar}
+                        />
+                      ))
+                    ) : (
                       <NotFoundData />
-                    </div>
+                    )}
                   </div>
                 </div>
-              </PageCenterBlockContainer>
-            ) : (
-              ''
-            )}
+              </div>
+            </PageCenterBlockContainer>
           </DefaultPageCenterContainer>
         </DefaultPageContainer>
       </div>

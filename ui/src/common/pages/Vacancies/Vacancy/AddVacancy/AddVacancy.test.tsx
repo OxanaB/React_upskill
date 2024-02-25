@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import { AddVacancy } from './AddVacancy';
+import AddVacancy from './AddVacancy';
 import { Router } from 'react-router';
 import { createBrowserHistory } from 'history';
 import { Loader } from '../../../../shared/Loader/Loader';

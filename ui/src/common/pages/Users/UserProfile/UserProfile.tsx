@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
-import noavatar from '../../../../assets/images/no-avatar.png';
+import { useParams } from 'react-router-dom';
 import { CurrentUserInfo } from '../../../components/CurrentUser/CurrentUserInfo';
 import { CurrentUserTags } from '../../../components/CurrentUser/CurrentUserTags';
 import {
@@ -15,17 +14,15 @@ import {
 } from '../../../redux/selectors/currentUserSelector';
 import { getProfileSelector } from '../../../redux/selectors/profileSelector';
 import { Loader } from '../../../shared/Loader/Loader';
-import useModal from '../../../hooks/useModal';
-import ModalEditPhoto from '../../../shared/Modal/ModalEditPhoto/ModalEditPhoto';
 import { editPhotoUserSelector } from '../../../redux/selectors/usersSelector';
 import { MessageNotification } from '../../../shared/MessageNotification/MessageNotification';
 import { CurrentUserFollowing } from '../../../components/CurrentUser/CurrentUserFollowing';
 
 import './Profile.scss';
 import '../UserProfile.scss';
+import { CurrentUserPhoto } from '../../../components/CurrentUser/CurrentUserPhoto';
 
 const UserProfile = () => {
-  const [Modal, open, close] = useModal();
   const { userId } = useParams<{ userId: string }>();
   const { me } = useSelector(getProfileSelector);
   const { isLoading } = useSelector(getCurrentUserStateSelector);
@@ -39,8 +36,6 @@ const UserProfile = () => {
     return () => dispatch(delCurrentUserAction());
   }, [dispatch, userId]);
 
-  const handleOpenEditPhoto = () => open();
-
   return (
     <>
       {me && user && (
@@ -51,43 +46,7 @@ const UserProfile = () => {
             )}
             <div className="defaultpage__inner">
               <div className="defaultpage__inner-left">
-                <div className="defaultpage__inner-block defaultpage__leftblock">
-                  <div className="userpage__inner-profile">
-                    <div className="userpage__inner-profile--img">
-                      <img
-                        className="userpage__inner-avatar"
-                        src={user.avatar || noavatar}
-                        alt="avatar"
-                      />
-                      {me._id === user._id && (
-                        <div
-                          className="userpage__inner-profile--edit"
-                          onClick={handleOpenEditPhoto}
-                        >
-                          <span>Set a photo</span>
-                        </div>
-                      )}
-                    </div>
-                    <div className="userpage__leftblock-buttons">
-                      {me._id === user._id && (
-                        <Link
-                          to="/edit-profile"
-                          className="btn btn-small primary"
-                        >
-                          Edit profile
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                  {me && me._id && (
-                    <Modal>
-                      <ModalEditPhoto
-                        close={close}
-                        model={{ id: me._id, avatar: me.avatar || noavatar }}
-                      />
-                    </Modal>
-                  )}
-                </div>
+                <CurrentUserPhoto me={me} user={user} />
 
                 {user && user.tags && user.tags.length ? (
                   <CurrentUserTags tags={user.tags} />
