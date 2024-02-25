@@ -1,7 +1,7 @@
 import Slider from 'rc-slider';
 import React, { FC } from 'react';
-import InputField from '../../shared/Input/InputField';
-import { Button } from '../../shared/Button/Button';
+import InputField from '../../../shared/Input/InputField';
+import { Button } from '../../../shared/Button/Button';
 
 interface CompanyStaffFilterProps {
   FilterStaff: ({ children }: { children: React.ReactNode }) => JSX.Element;

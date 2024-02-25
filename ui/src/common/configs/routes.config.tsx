@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 
-import Home from '../pages/Home';
+import Home from '../pages/Home/Home';
 const SignUp = lazy(() => import('../pages/Auth/SignUp/SignUp'));
 const SignIn = lazy(() => import('../pages/Auth/SignIn/SignIn'));
-import { RenderRoutes } from '../components/Routes/Routes';
+import { RenderRoutes } from '../containers/Layout/Routes';
 const Dashboard = lazy(() => import('../pages/Dashboard/Dashboard'));
 const UserProfile = lazy(
   () => import('../pages/Users/UserProfile/UserProfile'),

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
-import { Pagination } from '../../components/Pagination/Pagination';
-import VacancyItemDashboard from '../../components/Vacancies/VacancyItemDashboard';
+import { Pagination } from '../../shared/Pagination/Pagination';
+import VacancyItemDashboard from './VacancyItemDashboard';
 import { DefaultPageContainer } from '../../containers/DefaultPage/DefaultPage';
 import {
   DefaultPageCenterContainer,

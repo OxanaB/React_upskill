@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Company } from '../../interfaces/CompanyModel';
+import { Company } from '../../../interfaces/CompanyModel';
 import nocompany from '../../../assets/images/no-company.png';
 
-interface CurrentUserFollowingProps {
+interface UserFollowingProps {
   following: Array<Company> | null;
 }
 
-export const CurrentUserFollowing = ({
-  following,
-}: CurrentUserFollowingProps) => (
+export const UserFollowing = ({ following }: UserFollowingProps) => (
   <>
     {following &&
       following.map((company: Company) => (

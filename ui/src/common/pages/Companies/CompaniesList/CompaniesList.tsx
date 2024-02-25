@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import Select from 'react-select';
-import { Pagination } from '../../../components/Pagination/Pagination';
+import { Pagination } from '../../../shared/Pagination/Pagination';
 import { sortByDate } from '../../../constants/sortConsts';
 import { customStyles } from '../../../constants/userConsts';
 import { useFilter } from '../../../hooks/filters/useFilter';
@@ -17,9 +17,9 @@ import { CompanyItem } from './CompanyItem';
 import useFilterItem from '../../../hooks/filters/useFilterItem';
 
 import './CompaniesList.scss';
-import { InformationToolTip } from '../../../components/ToolTips/InformationToolTip';
-import { CompanyStaffFilter } from '../../../components/Company/CompanyStaffFilter';
-import { CompanyFollowersFilter } from '../../../components/Company/CompanyFollowersFilter';
+import { InformationToolTip } from '../../../shared/ToolTips/InformationToolTip';
+import { CompanyStaffFilter } from './CompanyStaffFilter';
+import { CompanyFollowersFilter } from './CompanyFollowersFilter';
 
 const CompaniesList = () => {
   const history = useHistory();

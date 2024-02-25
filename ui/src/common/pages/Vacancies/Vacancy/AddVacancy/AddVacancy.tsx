@@ -16,7 +16,7 @@ import { toast } from 'react-toastify';
 import { MessageNotification } from '../../../../shared/MessageNotification/MessageNotification';
 
 import { resetVacancyAction } from '../../../../redux/actions/VacancyActions';
-import { VacancyForm } from '../../../../components/Vacancies/VacancyForm';
+import { VacancyForm } from './AddVacancyForm';
 
 const AddVacancy = () => {
   const { companyUrl } = useParams<{ companyUrl: string }>();

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import Icon from '../../shared/Icon/Icon';
+import Icon from '../../../shared/Icon/Icon';
 
 interface CompanyFollowerFilterProps {
   followers: {

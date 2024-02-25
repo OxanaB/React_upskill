@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { CurrentUserInfo } from '../../../components/CurrentUser/CurrentUserInfo';
-import { CurrentUserTags } from '../../../components/CurrentUser/CurrentUserTags';
+import { UserInfo } from './UserInfo';
+import { UserTags } from '../UserTags';
 import {
   delCurrentUserAction,
   fetchCurrentUserAction,
@@ -16,11 +16,11 @@ import { getProfileSelector } from '../../../redux/selectors/profileSelector';
 import { Loader } from '../../../shared/Loader/Loader';
 import { editPhotoUserSelector } from '../../../redux/selectors/usersSelector';
 import { MessageNotification } from '../../../shared/MessageNotification/MessageNotification';
-import { CurrentUserFollowing } from '../../../components/CurrentUser/CurrentUserFollowing';
+import { UserFollowing } from './UserFollowing';
 
 import './Profile.scss';
 import '../UserProfile.scss';
-import { CurrentUserPhoto } from '../../../components/CurrentUser/CurrentUserPhoto';
+import { UserPhoto } from './UserPhoto';
 
 const UserProfile = () => {
   const { userId } = useParams<{ userId: string }>();
@@ -46,10 +46,10 @@ const UserProfile = () => {
             )}
             <div className="defaultpage__inner">
               <div className="defaultpage__inner-left">
-                <CurrentUserPhoto me={me} user={user} />
+                <UserPhoto me={me} user={user} />
 
                 {user && user.tags && user.tags.length ? (
-                  <CurrentUserTags tags={user.tags} />
+                  <UserTags tags={user.tags} />
                 ) : (
                   ''
                 )}
@@ -59,14 +59,14 @@ const UserProfile = () => {
                       <p className="userpage__leftblock-responses--title">
                         Following
                       </p>
-                      <CurrentUserFollowing following={following} />
+                      <UserFollowing following={following} />
                     </div>
                   </div>
                 ) : (
                   ''
                 )}
               </div>
-              <CurrentUserInfo me={me} user={user} />
+              <UserInfo me={me} user={user} />
             </div>
           </div>
         </div>

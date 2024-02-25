@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { Button } from '../../shared/Button/Button';
-import InputField from '../../shared/Input/InputField';
-import ErrorNotification from '../../shared/MessageNotification/ErrorNotification';
-import { AddCompanyDto } from '../../dto/AddCompanyDto';
+import { Button } from '../../../shared/Button/Button';
+import InputField from '../../../shared/Input/InputField';
+import ErrorNotification from '../../../shared/MessageNotification/ErrorNotification';
+import { AddCompanyDto } from '../../../dto/AddCompanyDto';
 import { FormikProps } from 'formik';
 
 const CompanyForm: FC<

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import SignUpForm from '../../../components/AuthForms/SignUpForm';
+import SignUpForm from './SignUpForm';
 import { getSignUpSelector } from '../../../redux/selectors/authSelector';
 import { Loader } from '../../../shared/Loader/Loader';
 import { MessageNotification } from '../../../shared/MessageNotification/MessageNotification';

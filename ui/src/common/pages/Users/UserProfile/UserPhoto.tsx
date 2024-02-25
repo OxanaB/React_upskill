@@ -1,14 +1,11 @@
 import React, { FC } from 'react';
-import { User } from '../../interfaces/UserModel';
-import ModalEditPhoto from '../../shared/Modal/ModalEditPhoto/ModalEditPhoto';
-import useModal from '../../hooks/useModal';
+import { User } from '../../../interfaces/UserModel';
+import ModalEditPhoto from '../../../shared/Modal/ModalEditPhoto/ModalEditPhoto';
+import useModal from '../../../hooks/useModal';
 import noavatar from '../../../assets/images/no-avatar.png';
 import { Link } from 'react-router-dom';
 
-export const CurrentUserPhoto: FC<{ user: User; me: User }> = ({
-  user,
-  me,
-}) => {
+export const UserPhoto: FC<{ user: User; me: User }> = ({ user, me }) => {
   const [Modal, open, close] = useModal();
 
   const handleOpenEditPhoto = () => open();

@@ -15,7 +15,7 @@ import {
   getVacancyStateSelector,
   addVacancyStateSelector,
 } from '../../../redux/selectors/vacancySelector';
-import DeleteButton from '../../../components/DeleteItem/DeleteButton';
+import DeleteButton from './DeleteItem/DeleteButton';
 import { fetchDeleteVacancyAction } from '../../../redux/actions/OperateVacancyActions';
 import { toast } from 'react-toastify';
 import { getProfileSelector } from '../../../redux/selectors/profileSelector';

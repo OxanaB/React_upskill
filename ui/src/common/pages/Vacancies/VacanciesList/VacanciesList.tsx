@@ -12,7 +12,7 @@ import UserFilter from '../../../components/Users/UserFilter';
 import { customStyles } from '../../../constants/userConsts';
 import { sortByDate } from '../../../constants/sortConsts';
 import Select from 'react-select';
-import { VacancyItem } from '../../../components/Vacancies/VacancyItem';
+import { VacancyItem } from './VacancyItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { getVacanciesLoadAction } from '../../../redux/actions/VacanciesActions';
 import {
@@ -21,10 +21,10 @@ import {
 } from '../../../redux/selectors/vacancySelector';
 import { Loader } from '../../../shared/Loader/Loader';
 import { Vacancy } from '../../../interfaces/VacancyModel';
-import { Pagination } from '../../../components/Pagination/Pagination';
+import { Pagination } from '../../../shared/Pagination/Pagination';
 
 import './Vacancies.scss';
-import { InformationToolTip } from '../../../components/ToolTips/InformationToolTip';
+import { InformationToolTip } from '../../../shared/ToolTips/InformationToolTip';
 
 const VacanciesList = () => {
   const history = useHistory();

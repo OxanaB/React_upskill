@@ -1,18 +1,18 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import InputField from '../../shared/Input/InputField';
-import Icon from '../../shared/Icon/Icon';
-import InputPasswordField from '../../shared/Input/InputPasswordField';
-import { Button } from '../../shared/Button/Button';
-import { AuthFormComponent } from '../../interfaces/AuthFormComponent';
+import InputField from '../../../shared/Input/InputField';
+import Icon from '../../../shared/Icon/Icon';
+import InputPasswordField from '../../../shared/Input/InputPasswordField';
+import { Button } from '../../../shared/Button/Button';
+import { AuthFormComponent } from '../../../interfaces/AuthFormComponent';
 import { useDispatch } from 'react-redux';
-import { signUpLoadAction } from '../../redux/actions/SignUpActions';
-import { signUpSchema } from '../../utils/validation/signUpSchema';
-import { SwitchBox } from '../../shared/SwitchBox/SwitchBox';
+import { signUpLoadAction } from '../../../redux/actions/SignUpActions';
+import { signUpSchema } from '../../../utils/validation/signUpSchema';
+import { SwitchBox } from '../../../shared/SwitchBox/SwitchBox';
 import { useState } from 'react';
 import { useHistory } from 'react-router';
 import { useSelector } from 'react-redux';
-import { getSignUpSelector } from '../../redux/selectors/authSelector';
+import { getSignUpSelector } from '../../../redux/selectors/authSelector';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 

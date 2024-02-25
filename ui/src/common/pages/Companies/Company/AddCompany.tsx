@@ -13,7 +13,7 @@ import { Loader } from '../../../shared/Loader/Loader';
 import { MessageNotification } from '../../../shared/MessageNotification/MessageNotification';
 import { addCompanySchema } from '../../../utils/validation/addCompanySchema';
 import { toast } from 'react-toastify';
-import CompanyForm from '../../../components/Company/CompanyForm';
+import CompanyForm from './CompanyForm';
 
 const AddCompany = () => {
   const [Modal, open, close] = useModal();

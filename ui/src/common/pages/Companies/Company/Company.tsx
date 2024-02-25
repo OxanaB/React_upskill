@@ -13,7 +13,7 @@ import {
   companiesVacanciesSelector,
 } from '../../../redux/selectors/companySelector';
 import { Loader } from '../../../shared/Loader/Loader';
-import { VacancyCompanyItem } from '../../../components/Vacancies/VacancyCompanyItem';
+import { VacancyCompanyItem } from './VacancyCompanyItem';
 import { Vacancy } from '../../../interfaces/VacancyModel';
 import { DefaultPageContainer } from '../../../containers/DefaultPage/DefaultPage';
 import { DefaultPageLeftContainer } from '../../../containers/DefaultPage/DefaultPageLeft';
@@ -21,11 +21,11 @@ import {
   DefaultPageCenterContainer,
   PageCenterBlockContainer,
 } from '../../../containers/DefaultPage/DefaultPageCenter';
-import { CompanyTitle } from '../../../components/Company/CompanyTitle';
+import { CompanyTitle } from './CompanyTitle';
 import { BlockItemInfo } from '../../../shared/PageBlock/BlockItemInfo';
 import { Link } from 'react-router-dom';
 import { getProfileSelector } from '../../../redux/selectors/profileSelector';
-import { NotFoundData } from '../../../components/NotFoundData/NotFoundData';
+import { NotFoundData } from './NotFoundData/NotFoundData';
 
 import './Company.scss';
 

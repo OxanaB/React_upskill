@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import Icon from '../../shared/Icon/Icon';
+import Icon from '../Icon/Icon';
 import './ToolTip.scss';
 
 export const InformationToolTip = ({ desc }: { desc: string }) => {

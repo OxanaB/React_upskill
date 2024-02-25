@@ -1,17 +1,17 @@
 import React, { FC } from 'react';
-import { PageCenterBlockContainer } from '../../containers/DefaultPage/DefaultPageCenter';
-import InputField from '../../shared/Input/InputField';
-import { Button } from '../../shared/Button/Button';
-import { SelectField } from '../../shared/Input/SelectField';
-import { workType, descConfig } from '../../constants/vacancyConsts';
-import { positions } from '../../constants/userConsts';
-import ErrorNotification from '../../shared/MessageNotification/ErrorNotification';
+import { PageCenterBlockContainer } from '../../../../containers/DefaultPage/DefaultPageCenter';
+import InputField from '../../../../shared/Input/InputField';
+import { Button } from '../../../../shared/Button/Button';
+import { SelectField } from '../../../../shared/Input/SelectField';
+import { workType, descConfig } from '../../../../constants/vacancyConsts';
+import { positions } from '../../../../constants/userConsts';
+import ErrorNotification from '../../../../shared/MessageNotification/ErrorNotification';
 
 import FroalaEditorComponent from 'react-froala-wysiwyg';
 import 'froala-editor/css/froala_style.min.css';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 import { FormikProps } from 'formik';
-import { AddVacancyDto } from '../../dto/AddVacancyDto';
+import { AddVacancyDto } from '../../../../dto/AddVacancyDto';
 
 export const VacancyForm: FC<
   Pick<

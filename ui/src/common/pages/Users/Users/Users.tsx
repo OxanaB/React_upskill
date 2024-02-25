@@ -10,7 +10,7 @@ import {
 } from '../../../redux/selectors/usersSelector';
 import { Loader } from '../../../shared/Loader/Loader';
 import { UserItem } from './UserItem';
-import { Pagination } from '../../../components/Pagination/Pagination';
+import { Pagination } from '../../../shared/Pagination/Pagination';
 import { useFilter } from '../../../hooks/filters/useFilter';
 import { customStyles } from '../../../constants/userConsts';
 import { sortByDate } from '../../../constants/sortConsts';
@@ -18,7 +18,7 @@ import { useHistory } from 'react-router';
 import UserFilter from '../../../components/Users/UserFilter';
 
 import './Users.scss';
-import { InformationToolTip } from '../../../components/ToolTips/InformationToolTip';
+import { InformationToolTip } from '../../../shared/ToolTips/InformationToolTip';
 
 const Users = () => {
   const history = useHistory();

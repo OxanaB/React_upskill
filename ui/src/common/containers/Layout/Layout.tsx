@@ -1,13 +1,13 @@
 import React, { Suspense } from 'react';
-import Header from '../../components/Header/Header';
+import Header from './Header/Header';
 import { Switch, useLocation } from 'react-router-dom';
-import Navigation from '../../components/Navigation/Navigation';
-import Footer from '../../components/Footer/Footer';
+import Navigation from './Navigation/Navigation';
+import Footer from './Footer/Footer';
 import { ToastContainer } from 'react-toastify';
-import { RouteWithSubRoutes } from '../../components/Routes/Routes';
+import { RouteWithSubRoutes } from './Routes';
 import { routes } from '../../configs/routes.config';
 import { ExtendedRouteProps } from '../../interfaces/Route';
-import { MobileNav } from '../../components/Navigation/MobileNav';
+import { MobileNav } from './Navigation/MobileNav';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './Layout.scss';
