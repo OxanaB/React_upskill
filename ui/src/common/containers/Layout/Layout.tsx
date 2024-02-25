@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Header from '../../components/Header/Header';
 import { Switch, useLocation } from 'react-router-dom';
 import Navigation from '../../components/Navigation/Navigation';
@@ -11,6 +11,7 @@ import { MobileNav } from '../../components/Navigation/MobileNav';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './Layout.scss';
+import { Loader } from '../../shared/Loader/Loader';
 
 const Layout = () => {
   const location = useLocation();
@@ -22,7 +23,9 @@ const Layout = () => {
         </Header>
         <Switch>
           {routes.list.map((route: ExtendedRouteProps, i: number) => (
-            <RouteWithSubRoutes key={i + route.path} {...route} />
+            <Suspense fallback={<Loader init={false} />}>
+              <RouteWithSubRoutes key={i + route.path} {...route} />
+            </Suspense>
           ))}
         </Switch>
         <ToastContainer />

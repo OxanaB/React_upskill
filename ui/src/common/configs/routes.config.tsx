@@ -1,19 +1,31 @@
+import { lazy } from 'react';
+
 import Home from '../pages/Home';
-import SignUp from '../pages/Auth/SignUp/SignUp';
-import SignIn from '../pages/Auth/SignIn/SignIn';
+const SignUp = lazy(() => import('../pages/Auth/SignUp/SignUp'));
+const SignIn = lazy(() => import('../pages/Auth/SignIn/SignIn'));
 import { RenderRoutes } from '../components/Routes/Routes';
-import Dashboard from '../pages/Dashboard/Dashboard';
-import UserProfile from '../pages/Users/UserProfile/UserProfile';
-import NotFound from '../pages/NotFound/NotFound';
-import EditProfile from '../pages/Users/EditProfile/EditProfile';
+const Dashboard = lazy(() => import('../pages/Dashboard/Dashboard'));
+const UserProfile = lazy(
+  () => import('../pages/Users/UserProfile/UserProfile'),
+);
+const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
+const EditProfile = lazy(
+  () => import('../pages/Users/EditProfile/EditProfile'),
+);
 import { RenderRoutesProps } from '../interfaces/Route';
-import Users from '../pages/Users/Users/Users';
-import Company from '../pages/Companies/Company/Company';
-import { AddCompany } from '../pages/Companies/Company/AddCompany';
-import CompaniesList from '../pages/Companies/CompaniesList/CompaniesList';
-import Vacancy from '../pages/Vacancies/Vacancy/Vacancy';
-import { AddVacancy } from '../pages/Vacancies/Vacancy/AddVacancy/AddVacancy';
-import VacanciesList from '../pages/Vacancies/VacanciesList/VacanciesList';
+const Users = lazy(() => import('../pages/Users/Users/Users'));
+const Company = lazy(() => import('../pages/Companies/Company/Company'));
+const AddCompany = lazy(() => import('../pages/Companies/Company/AddCompany'));
+const CompaniesList = lazy(
+  () => import('../pages/Companies/CompaniesList/CompaniesList'),
+);
+const Vacancy = lazy(() => import('../pages/Vacancies/Vacancy/Vacancy'));
+const AddVacancy = lazy(
+  () => import('../pages/Vacancies/Vacancy/AddVacancy/AddVacancy'),
+);
+const VacanciesList = lazy(
+  () => import('../pages/Vacancies/VacanciesList/VacanciesList'),
+);
 
 export const routes: RenderRoutesProps = {
   path: '/',
