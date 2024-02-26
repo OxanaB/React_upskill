@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import * as qs from 'query-string';
 import { ValueType } from 'react-select';
 import { useLocation } from 'react-router';
@@ -47,7 +47,7 @@ export const useFilter = (
 
   const [followers, setFollowers] = useState(0);
 
-  const transformPosition = () => {
+  const transformPosition = useCallback(() => {
     let resultPosition = '';
     position.map((obj, i) => {
       resultPosition +=
@@ -55,7 +55,7 @@ export const useFilter = (
       return obj;
     });
     return resultPosition;
-  };
+  }, [position]);
 
   const handlePageChange = (selectedItem: { selected: number }) => {
     const currentPage = selectedItem.selected + 1;
@@ -120,7 +120,22 @@ export const useFilter = (
         break;
       }
     }
-  }, [currentPage, filter, isApplyClicked, followers]);
+  }, [
+    currentPage,
+    filter,
+    isApplyClicked,
+    followers,
+    isPositionVisible,
+    isVisible,
+    leftStaff,
+    maxSalary,
+    minSalary,
+    position.length,
+    queries.salary,
+    rightStaff,
+    transformPosition,
+    type,
+  ]);
 
   return {
     query,

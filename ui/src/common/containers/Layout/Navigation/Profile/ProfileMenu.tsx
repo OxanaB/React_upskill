@@ -1,8 +1,8 @@
 import React from 'react';
-import { User } from '../../interfaces/UserModel';
-import Icon from '../../shared/Icon/Icon';
+import { User } from '../../../../interfaces/UserModel';
+import Icon from '../../../../shared/Icon/Icon';
 import { useDispatch } from 'react-redux';
-import { delProfileAction } from '../../redux/actions/ProfileActions';
+import { delProfileAction } from '../../../../redux/actions/ProfileActions';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 

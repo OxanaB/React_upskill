@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import noavatar from '../../../../assets/images/no-avatar.png';
-import { CurrentUserTags } from '../../../components/CurrentUser/CurrentUserTags';
+import { UserTags } from '../UserTags';
 import { User } from '../../../interfaces/UserModel';
 import classNames from 'classnames';
 import moment from 'moment';
@@ -48,7 +48,7 @@ export const UserItem = ({ user, filter }: UserItemProps) => (
     </span>
     {user.tags && user.tags.length ? (
       <div className="users__item-content">
-        <CurrentUserTags tags={user.tags} />
+        <UserTags tags={user.tags} />
         {user.city && (
           <span className="users__item-content--city">{user.city}</span>
         )}

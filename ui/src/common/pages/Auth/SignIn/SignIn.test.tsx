@@ -4,7 +4,7 @@ import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import SignIn from './SignIn';
 import { MessageNotification } from '../../../shared/MessageNotification/MessageNotification';
-import SignInForm from '../../../components/AuthForms/SignInForm/SignInForm';
+import SignInForm from './SignInForm';
 import { Loader } from '../../../shared/Loader/Loader';
 const mockStore = configureMockStore();
 

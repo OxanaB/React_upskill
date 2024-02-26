@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from '../../shared/Button/Button';
 
-interface CurrentUserTagsProps {
+interface UserTagsProps {
   tags: string[] | string;
 }
 
-export const CurrentUserTags = ({ tags }: CurrentUserTagsProps) => (
+export const UserTags = ({ tags }: UserTagsProps) => (
   <>
     {tags && Array.isArray(tags) && (
       <div className="defaultpage__inner-block defaultpage__leftblock">

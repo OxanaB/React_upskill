@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from '../../shared/Button/Button';
-import useModal from '../../hooks/useModal';
-import ModalConfirm from '../../shared/Modal/ModalConfirm/ModalConfirm';
+import { Button } from '../../../../shared/Button/Button';
+import useModal from '../../../../hooks/useModal';
+import ModalConfirm from '../../../../shared/Modal/ModalConfirm/ModalConfirm';
 
 interface DeleteButtonProps {
   del: () => void;

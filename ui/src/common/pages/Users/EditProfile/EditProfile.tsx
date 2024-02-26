@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import EditProfileForm from '../../../components/EditProfileForm/EditProfileForm';
+import EditProfileForm from './EditProfileForm';
 import { MessageNotification } from '../../../shared/MessageNotification/MessageNotification';
 import { useDispatch, useSelector } from 'react-redux';
 import {

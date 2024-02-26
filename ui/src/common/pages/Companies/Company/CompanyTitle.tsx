@@ -1,10 +1,10 @@
 import React from 'react';
-import { Company } from '../../interfaces/CompanyModel';
-import { Button } from '../../shared/Button/Button';
+import { Company } from '../../../interfaces/CompanyModel';
+import { Button } from '../../../shared/Button/Button';
 import nocompany from '../../../assets/images/no-company.png';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getCompanyStateSelector } from '../../redux/selectors/companySelector';
+import { getCompanyStateSelector } from '../../../redux/selectors/companySelector';
 
 interface CompanyTitleProps {
   company: Company;

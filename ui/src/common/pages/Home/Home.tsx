@@ -1,5 +1,5 @@
 import React from 'react';
-import Features from '../components/Features/Features';
+import Features from './Features';
 
 const Home = () => {
   return (

@@ -1,13 +1,13 @@
 import React from 'react';
-import { User } from '../../interfaces/UserModel';
+import { User } from '../../../interfaces/UserModel';
 import moment from 'moment';
 
-interface CurrentUserInfoProps {
+interface UserInfoProps {
   user: User;
   me: User;
 }
 
-export const CurrentUserInfo = ({ user, me }: CurrentUserInfoProps) => (
+export const UserInfo = ({ user, me }: UserInfoProps) => (
   <div className="defaultpage__inner-center">
     <div className="defaultpage__inner-block userpage__inner-info">
       <div className="defaultpage__inner userpage__inner-info--short">

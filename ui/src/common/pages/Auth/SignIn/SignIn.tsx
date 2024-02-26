@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import SignInForm from '../../../components/AuthForms/SignInForm/SignInForm';
+import SignInForm from './SignInForm';
 import { signUpResetAction } from '../../../redux/actions/SignUpActions';
 import {
   getSignInSelector,

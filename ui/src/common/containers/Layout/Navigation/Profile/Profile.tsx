@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import noavatar from '../../../assets/images/no-avatar.png';
-import Icon from '../../shared/Icon/Icon';
+import Icon from '../../../../shared/Icon/Icon';
 import classNames from 'classnames';
 import { ProfileMenu } from './ProfileMenu';
 import { useSelector } from 'react-redux';
-import { getProfileSelector } from '../../redux/selectors/profileSelector';
+import { getProfileSelector } from '../../../../redux/selectors/profileSelector';
 
 import './Profile.scss';
 

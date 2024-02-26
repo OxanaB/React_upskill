@@ -1,12 +1,9 @@
 import { useFormik } from 'formik';
 import React, { useEffect } from 'react';
 import nocompany from '../../../../assets/images/no-company.png';
-import InputField from '../../../shared/Input/InputField';
 import { BlockPicker } from 'react-color';
 import ModalEditPhoto from '../../../shared/Modal/ModalEditPhoto/ModalEditPhoto';
 import useModal from '../../../hooks/useModal';
-import ErrorNotification from '../../../shared/MessageNotification/ErrorNotification';
-import { Button } from '../../../shared/Button/Button';
 import { AddCompanyDto } from '../../../dto/AddCompanyDto';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAddCompanyAction } from '../../../redux/actions/AddCompanyActions';
@@ -16,8 +13,9 @@ import { Loader } from '../../../shared/Loader/Loader';
 import { MessageNotification } from '../../../shared/MessageNotification/MessageNotification';
 import { addCompanySchema } from '../../../utils/validation/addCompanySchema';
 import { toast } from 'react-toastify';
+import CompanyForm from './CompanyForm';
 
-export const AddCompany = () => {
+const AddCompany = () => {
   const [Modal, open, close] = useModal();
   const dispatch = useDispatch();
   const history = useHistory();
@@ -143,99 +141,12 @@ export const AddCompany = () => {
               <div className="defaultpage__inner-center company__form">
                 <h2 className="editproavatar__title">Add company</h2>
                 <div className="defaultpage__inner-block">
-                  <form onSubmit={handleSubmit}>
-                    <span className="userpage__inner-info--desc">
-                      Main information
-                    </span>
-                    <div className="defaultpage__inner-line"></div>
-                    <InputField
-                      type="text"
-                      placeholder="Company name"
-                      name="name"
-                      onChange={handleChange}
-                      value={values.name}
-                      required
-                      errors={errors.name}
-                      label="Company name:"
-                    ></InputField>
-                    <InputField
-                      type="text"
-                      placeholder="Company description"
-                      name="description"
-                      onChange={handleChange}
-                      errors={errors.description}
-                      value={values.description}
-                      label="Description:"
-                    ></InputField>
-                    <InputField
-                      type="text"
-                      placeholder="Company URL"
-                      name="companyUrl"
-                      onChange={handleChange}
-                      errors={errors.companyUrl}
-                      value={values.companyUrl}
-                      required
-                      label="Company URL:"
-                    ></InputField>
-                    <InputField
-                      type="text"
-                      placeholder="Company website"
-                      name="website"
-                      onChange={handleChange}
-                      errors={errors.website}
-                      value={values.website}
-                      required
-                      label="Company website:"
-                    ></InputField>
-                    <InputField
-                      type="text"
-                      placeholder="Company address"
-                      name="address"
-                      onChange={handleChange}
-                      errors={errors.address}
-                      value={values.address}
-                      required
-                      label="Main office address:"
-                    ></InputField>
-                    <div className="defaultpage__inner-block--minform">
-                      <span className="userpage__inner-info--desc">
-                        Additional information
-                      </span>
-                      <div className="defaultpage__inner-line"></div>
-                      <div className="defaultpage__inner-block--minform inputs">
-                        <InputField
-                          type="number"
-                          placeholder="Year of foundation"
-                          name="year"
-                          onChange={handleChange}
-                          errors={errors.year}
-                          value={values.year}
-                          label="Year of foundation:"
-                        ></InputField>
-                        <InputField
-                          type="number"
-                          placeholder="Number of staff"
-                          name="staff"
-                          errors={errors.staff}
-                          onChange={handleChange}
-                          value={values.staff}
-                          label="Number of staff:"
-                        ></InputField>
-                      </div>
-                    </div>
-                    <div className="defaultpage__inner-line"></div>
-                    <textarea
-                      name="about"
-                      placeholder="Describe your company shortly"
-                      value={values.about}
-                      onChange={handleChange}
-                      rows={4}
-                    />
-                    <ErrorNotification errors={errors.about?.toString()} />
-                    <Button type="submit" btnTheme="btn-small">
-                      Add company
-                    </Button>
-                  </form>
+                  <CompanyForm
+                    errors={errors}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                    values={values}
+                  />
                 </div>
               </div>
             </div>
@@ -245,3 +156,5 @@ export const AddCompany = () => {
     </div>
   );
 };
+
+export default AddCompany;

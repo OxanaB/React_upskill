@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Vacancy } from '../../interfaces/VacancyModel';
+import { Vacancy } from '../../../interfaces/VacancyModel';
 import moment from 'moment';
 
 interface VacancyItemProps {

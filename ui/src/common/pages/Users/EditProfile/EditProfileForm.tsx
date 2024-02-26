@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
-import InputField from '../../shared/Input/InputField';
-import { Button } from '../../shared/Button/Button';
-import { SelectField } from '../../shared/Input/SelectField';
+import InputField from '../../../shared/Input/InputField';
+import { Button } from '../../../shared/Button/Button';
+import { SelectField } from '../../../shared/Input/SelectField';
 import DatePicker from 'react-datepicker';
-import { editUserSchema } from '../../utils/validation/editUserSchema';
-import ErrorNotification from '../../shared/MessageNotification/ErrorNotification';
-import useModal from '../../hooks/useModal';
-import ModalConfirm from '../../shared/Modal/ModalConfirm/ModalConfirm';
-import { editProfileLoadAction } from '../../redux/actions/EditProfileActions';
+import { editUserSchema } from '../../../utils/validation/editUserSchema';
+import ErrorNotification from '../../../shared/MessageNotification/ErrorNotification';
+import useModal from '../../../hooks/useModal';
+import ModalConfirm from '../../../shared/Modal/ModalConfirm/ModalConfirm';
+import { editProfileLoadAction } from '../../../redux/actions/EditProfileActions';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProfileSelector } from '../../redux/selectors/profileSelector';
-import { jobStatus, positions } from '../../constants/userConsts';
+import { getProfileSelector } from '../../../redux/selectors/profileSelector';
+import { jobStatus, positions } from '../../../constants/userConsts';
 import { Prompt } from 'react-router';
 import { Location } from 'history';
-import { EditProfileFormProps } from '../../interfaces/EditProfileFormProps';
+import { EditProfileFormProps } from '../../../interfaces/EditProfileFormProps';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
